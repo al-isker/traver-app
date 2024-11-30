@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 const fontPrimary = Golos_Text({
+	subsets: ['latin'],
 	weight: ['400', '500', '600', '700', '800', '900'],
 	variable: '--font-primary'
 });

@@ -77,6 +77,7 @@ export const BottomNavigation = () => {
 					component='nav'
 					className='h-14 bg-transparent'
 					value={findActiveTab()}
+					showLabels
 				>
 					{TABS.map((tab, i) => (
 						<BottomNavigationAction

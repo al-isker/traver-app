@@ -11,7 +11,7 @@ export const Index = () => {
 	useEffect(() => {
 		const id = setTimeout(() => {
 			router.replace(ROUTES.home);
-		}, 2000);
+		}, 1500);
 
 		return () => {
 			clearTimeout(id);
@@ -20,7 +20,7 @@ export const Index = () => {
 
 	return (
 		<div className='flex h-full items-center justify-center'>
-			<img className='w-[80%]' src='/logo.png' alt='logo' />
+			<img className='w-[80%] max-w-96' src='/logo.png' alt='logo' />
 		</div>
 	);
 };
