@@ -9,7 +9,8 @@ export const BREAKPOINTS = {
 };
 
 export const FONT_FAMILY = {
-	primary: 'var(--font-primary)'
+	primary: 'var(--font-primary)',
+	title: 'var(--font-title)'
 };
 
 export const COLORS = {

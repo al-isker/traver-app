@@ -27,7 +27,7 @@ import { BadgeSession } from './BadgeSession';
 const TABS = [
 	{
 		label: 'Главная',
-		href: TAB_ROUTES.rating,
+		href: TAB_ROUTES.home,
 		icon: (
 			<BadgeRating>
 				<HomeRounded />

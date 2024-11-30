@@ -1,19 +1,7 @@
-'use client';
-
 import { NextPage } from 'next';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
-import { ROUTES } from '@/lib/constants/routes';
+import { Index } from '@/components/screens/Index';
 
-const IndexPage: NextPage = () => {
-	const router = useRouter();
-
-	useEffect(() => {
-		router.replace(ROUTES.rating);
-	}, []);
-
-	return <></>;
-};
+const IndexPage: NextPage = () => <Index />;
 
 export default IndexPage;

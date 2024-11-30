@@ -1,7 +1,5 @@
 export enum ROUTES {
-	login = '/login',
-	error = '/error',
-	rating = '/rating',
+	home = '/home',
 	session = '/session',
 	dashboard = '/dashboard',
 	profile = '/profile',
@@ -9,7 +7,7 @@ export enum ROUTES {
 }
 
 export enum TAB_ROUTES {
-	rating = ROUTES.rating,
+	home = ROUTES.home,
 	session = ROUTES.session,
 	dashboard = ROUTES.dashboard,
 	profile = ROUTES.profile

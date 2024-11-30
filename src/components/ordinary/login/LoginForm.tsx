@@ -1,15 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 import { motion } from 'framer-motion';
 import { SubmitHandler } from 'react-hook-form';
 
-import { ACCESS_TOKEN_KEY } from '@/lib/constants/localStorage';
-import { ROUTES } from '@/lib/constants/routes';
-import { useLoginMutation } from '@/lib/services/auth';
 import { LoginSchema } from '@/lib/types/schemes';
-import { parseQueryError } from '@/lib/utils/parse-query-error';
 
 import { LoginFormBody } from './LoginFormBody';
 import { LoginFormHeader } from './LoginFormHeader';
@@ -28,41 +25,30 @@ const animation = {
 };
 
 export const LoginForm = () => {
+	const [isLoading, setIsLoading] = useState(false);
 	const router = useRouter();
 
-	const [login, { error, isLoading, isSuccess }] = useLoginMutation();
-
-	const parsedError = parseQueryError(error);
-
 	const submit: SubmitHandler<LoginSchema> = body => {
-		login(body)
-			.unwrap()
-			.then(({ accessToken }) => {
-				localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
+		setIsLoading(true);
 
-				router.replace(ROUTES.rating);
-			});
+		setTimeout(() => {}, 1500);
 	};
 
 	return (
 		<div className='flex h-full flex-col justify-center gap-y-4'>
-			<LoginFormHeader loading={isLoading || isSuccess} />
+			<LoginFormHeader loading={isLoading} />
 
 			<motion.div
 				className='overflow-hidden'
 				variants={animation}
 				initial='hide'
-				animate={isLoading || isSuccess ? 'hide' : 'show'}
+				animate={isLoading ? 'hide' : 'show'}
 				transition={{
 					type: 'spring',
 					mass: 0.1
 				}}
 			>
-				<LoginFormBody
-					className='mx-auto'
-					onSubmit={submit}
-					errorMessage={parsedError?.message}
-				/>
+				<LoginFormBody className='mx-auto' onSubmit={submit} />
 			</motion.div>
 		</div>
 	);

@@ -33,7 +33,7 @@ export const LoginFormBody = ({ className, errorMessage, onSubmit }: Props) => {
 					size='small'
 					control={control}
 					name='fullName'
-					label='ФИО'
+					label='Телефон'
 					rules={{
 						...required(),
 						...minLength(5),

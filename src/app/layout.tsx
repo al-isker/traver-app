@@ -1,22 +1,28 @@
 import { Metadata } from 'next';
-import { Golos_Text } from 'next/font/google';
+import { Audiowide, Golos_Text } from 'next/font/google';
 import { FC, PropsWithChildren } from 'react';
 
-const font = Golos_Text({
-	subsets: ['latin'],
+export const metadata: Metadata = {
+	title: 'Dag Trip',
+	icons: { icon: '/favicon.svg' }
+};
+
+const fontPrimary = Golos_Text({
 	weight: ['400', '500', '600', '700', '800', '900'],
 	variable: '--font-primary'
 });
 
-export const metadata: Metadata = {
-	title: 'Stud Progress',
-	description: 'Новый личный кабинет для студентов ДГМУ',
-	icons: { icon: '/favicon.svg' }
-};
+const fontTitle = Audiowide({
+	subsets: ['latin'],
+	weight: ['400'],
+	variable: '--font-title'
+});
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => (
 	<html lang='ru'>
-		<body className={font.className}>{children}</body>
+		<body className={`${fontPrimary.variable} ${fontTitle.variable}`}>
+			{children}
+		</body>
 	</html>
 );
 
