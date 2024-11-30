@@ -7,6 +7,6 @@ export const Title = ({ className }: { className?: string }) => (
 			className
 		)}
 	>
-		DagTrip
+		Dag Trip
 	</h1>
 );

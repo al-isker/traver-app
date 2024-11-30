@@ -19,47 +19,26 @@ import { Limiter } from '@/components/reused/limiter/Limiter';
 
 import { TAB_ROUTES } from '@/lib/constants/routes';
 
-import { BadgeDashboard } from './BadgeDashboard';
-import { BadgeProfile } from './BadgeProfile';
-import { BadgeRating } from './BadgeRating';
-import { BadgeSession } from './BadgeSession';
-
 const TABS = [
 	{
 		label: 'Главная',
 		href: TAB_ROUTES.home,
-		icon: (
-			<BadgeRating>
-				<HomeRounded />
-			</BadgeRating>
-		)
+		icon: <HomeRounded />
 	},
 	{
-		label: 'Сессия',
+		label: 'Пример',
 		href: TAB_ROUTES.session,
-		icon: (
-			<BadgeSession>
-				<SchoolRounded />
-			</BadgeSession>
-		)
+		icon: <SchoolRounded />
 	},
 	{
-		label: 'Статистика',
+		label: 'Пример',
 		href: TAB_ROUTES.dashboard,
-		icon: (
-			<BadgeDashboard>
-				<DonutLarge />
-			</BadgeDashboard>
-		)
+		icon: <DonutLarge />
 	},
 	{
 		label: 'Профиль',
 		href: TAB_ROUTES.profile,
-		icon: (
-			<BadgeProfile>
-				<PersonRounded />
-			</BadgeProfile>
-		)
+		icon: <PersonRounded />
 	}
 ];
 
@@ -71,7 +50,7 @@ export const BottomNavigation = () => {
 	};
 
 	return (
-		<Paper className='z-10 w-full rounded-none' elevation={4}>
+		<Paper className='z-10 w-full rounded-none' elevation={8}>
 			<Limiter>
 				<BottomNavigationMUI
 					component='nav'

@@ -1,4 +1,4 @@
 export const USER = {
-	firstName: 'Алискер',
-	lastName: 'Бабаев'
+	lastName: 'Магомедов',
+	firstName: 'Магомед'
 };
