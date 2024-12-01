@@ -65,6 +65,7 @@ export const Home = () => {
 					>
 						{PLACES.map(place => (
 							<Placemark
+								key={place.id}
 								options={{ iconColor: COLORS.light.primary }}
 								geometry={place.coordinates}
 							/>

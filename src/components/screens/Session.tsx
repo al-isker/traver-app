@@ -14,6 +14,7 @@ export const Routes = () => {
 			<Container className='flex flex-col gap-3 pt-container'>
 				{PLACES.map(place => (
 					<ButtonBase
+						key={place.id}
 						className='h-40 w-full rounded bg-white p-3 shadow-lg'
 						LinkComponent={Link}
 						href={`${ROUTES.routes}/${place.id}`}
