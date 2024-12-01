@@ -7,7 +7,7 @@ import {
 	DonutLarge,
 	HomeRounded,
 	PersonRounded,
-	SchoolRounded
+	Route
 } from '@mui/icons-material';
 import {
 	BottomNavigationAction,
@@ -26,9 +26,9 @@ const TABS = [
 		icon: <HomeRounded />
 	},
 	{
-		label: 'Пример',
-		href: TAB_ROUTES.session,
-		icon: <SchoolRounded />
+		label: 'Маршруты',
+		href: TAB_ROUTES.routes,
+		icon: <Route />
 	},
 	{
 		label: 'Пример',

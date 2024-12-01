@@ -1,6 +1,6 @@
 export enum ROUTES {
 	home = '/home',
-	session = '/session',
+	routes = '/routes',
 	dashboard = '/dashboard',
 	profile = '/profile',
 	privacyPolicy = '/profile/privacy-policy'
@@ -8,7 +8,7 @@ export enum ROUTES {
 
 export enum TAB_ROUTES {
 	home = ROUTES.home,
-	session = ROUTES.session,
+	routes = ROUTES.routes,
 	dashboard = ROUTES.dashboard,
 	profile = ROUTES.profile
 }
