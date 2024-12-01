@@ -27,11 +27,20 @@ export const Home = () => {
 			<div className='relative h-full w-full'>
 				<CircularProgress className='absolute left-[calc(50%-20px)] top-[calc(50%-20px)]' />
 
-				<section className='absolute bottom-0 left-0 z-20 h-20 w-full bg-gradient-to-b from-transparent via-50% to-black/20'>
-					<div className='flex gap-2 overflow-x-auto'>
-						{PLACES.map(place => (
-							<Button LinkComponent={Link} href={ROUTES.routes} />
-						))}
+				<section className='absolute bottom-0 left-0 z-20 flex h-20 w-full bg-gradient-to-b from-transparent via-50% to-black/50'>
+					<div className='mt-auto flex gap-2 overflow-x-auto p-2'>
+						<div>
+							{PLACES.map(place => (
+								<Button
+									className='h-fit text-nowrap'
+									variant='contained'
+									LinkComponent={Link}
+									href={ROUTES.routes}
+								>
+									{place.name}
+								</Button>
+							))}
+						</div>
 					</div>
 				</section>
 

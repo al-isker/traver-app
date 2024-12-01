@@ -3,12 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import {
-	DonutLarge,
-	HomeRounded,
-	PersonRounded,
-	Route
-} from '@mui/icons-material';
+import { Flag, HomeRounded, PersonRounded, Route } from '@mui/icons-material';
 import {
 	BottomNavigationAction,
 	BottomNavigation as BottomNavigationMUI,
@@ -31,9 +26,9 @@ const TABS = [
 		icon: <Route />
 	},
 	{
-		label: 'Пример',
-		href: TAB_ROUTES.dashboard,
-		icon: <DonutLarge />
+		label: 'События',
+		href: TAB_ROUTES.events,
+		icon: <Flag />
 	},
 	{
 		label: 'Профиль',
