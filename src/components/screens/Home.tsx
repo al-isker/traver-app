@@ -85,7 +85,7 @@ interface PlaceCardProps {
 	price: number;
 }
 
-const PlaceCard = ({
+export const PlaceCard = ({
 	id,
 	className,
 	name,
