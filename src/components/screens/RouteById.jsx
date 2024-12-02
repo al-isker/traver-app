@@ -28,6 +28,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from '../reused/container/Container';
 import { Limiter } from '../reused/limiter/Limiter';
+
 export const RouteById = () => {
 	const params = useParams();
 	// State для модального окна
